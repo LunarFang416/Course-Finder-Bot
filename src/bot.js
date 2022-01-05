@@ -34,12 +34,7 @@ for (const file of eventFiles) {
     client.once(event.name, async (...args) =>
       event.execute(...args, commands)
     );
-    client.user.setPresence({
-      status: "online",
-      activity: {
-        name: "Use /helpme for more info",
-      },
-    });
+    
   } else {
     client.on(event.name, async (...args) => event.execute(...args, commands));
   }

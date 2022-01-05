@@ -10,6 +10,12 @@ module.exports = {
   once: true,
   execute(client, commands) {
     console.log(`${client.user.username} is logged in`);
+    client.user.setPresence({
+      status: "online",
+      activity: {
+        name: "Use /helpme for more info",
+      },
+    });
 
     const CLIENT_ID = client.user.id;
     const rest = new REST({ version: "9" }).setToken(token);
