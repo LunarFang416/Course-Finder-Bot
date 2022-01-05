@@ -8,14 +8,16 @@ const GUILD_ID = process.env.GUILD_ID;
 module.exports = {
   name: "ready",
   once: true,
-  execute(client, commands) {
+  async execute(client, commands) {
     console.log(`${client.user.username} is logged in`);
     client.user.setPresence({
-      status: "online",
-      activities: {
-        name: "to /helpme for more info",
-        type: "LISTENING"
-      },
+      activities: [
+        {
+          name: "to /helpme",
+          type: "LISTENING",
+        },
+      ],
+      status: "online"
     });
 
     const CLIENT_ID = client.user.id;
