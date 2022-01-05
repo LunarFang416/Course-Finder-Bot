@@ -12,8 +12,9 @@ module.exports = {
     console.log(`${client.user.username} is logged in`);
     client.user.setPresence({
       status: "online",
-      activity: {
-        name: "Use /helpme for more info",
+      activities: {
+        name: "to /helpme for more info",
+        type: "LISTENING"
       },
     });
 
