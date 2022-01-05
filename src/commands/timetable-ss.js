@@ -3,6 +3,7 @@ const { MessageEmbed } = require("discord.js");
 const { errorEmbed, createCommand } = require("../util");
 
 const createAttachment = (data) => {
+  console.log(data)
   let file = data.image;
   const sfbuff = new Buffer.from(file, "base64");
   const sfattach = new Discord.MessageAttachment(sfbuff, "output.png");

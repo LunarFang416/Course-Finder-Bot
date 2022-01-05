@@ -29,7 +29,7 @@ module.exports = {
         let fullCode = getFullCode(interaction);
         const { data } = await fetchMeetingSection(fullCode);
         await command.execute(interaction, data);
-      }else if (command.data.name === "timetable-ss") {
+      } else if (command.data.name === "timetable-ss") {
         let fullCode = getFullCode(interaction);
         const { data } = await fetchMeetingSectionSS(fullCode);
         await command.execute(interaction, data);
