@@ -34,6 +34,7 @@ for (const file of eventFiles) {
     client.once(event.name, async (...args) =>
       event.execute(...args, commands)
     );
+    client.user.setActivity(`INSERT TEXT HERE`, { type: "WATCHING" });
   } else {
     client.on(event.name, async (...args) => event.execute(...args, commands));
   }
