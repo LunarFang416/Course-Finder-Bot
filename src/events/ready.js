@@ -13,7 +13,7 @@ module.exports = {
     client.user.setPresence({
       activities: [
         {
-          name: "to /helpme",
+          name: "/helpme",
           type: "LISTENING",
         },
       ],
